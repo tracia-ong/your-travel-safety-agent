@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelPath | Travel Safety Swarm</title>
+    <style>
+        body { font-family: 'Courier New', Courier, monospace; background-color: #0d1117; color: #58a6ff; padding: 20px; }
+        .container { max-width: 800px; margin: auto; border: 1px solid #30363d; padding: 20px; border-radius: 8px; }
+        h1 { color: #f0f6fc; text-align: center; }
+        .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        input { flex-grow: 1; padding: 10px; border-radius: 4px; border: 1px solid #30363d; background: #161b22; color: white; }
+        button { padding: 10px 20px; background-color: #238636; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        #terminal { background-color: #010409; border: 1px solid #30363d; height: 300px; padding: 15px; overflow-y: scroll; border-radius: 4px; margin-top: 10px; }
+        .log-entry { margin-bottom: 5px; font-size: 14px; }
+        .thought { color: #8b949e; font-style: italic; }
+        .alert { color: #f85149; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛰️ SENTINEL PATH</h1>
+        <p style="text-align: center; color: #8b949e;">Autonomous Travel Safety Swarm</p>
+        
+        <div class="input-group">
+            <input type="text" id="destination" placeholder="Enter destination (e.g. Japan, France)...">
+            <button onclick="startMission()">DEPLOY SWARM</button>
+        </div>
+
+        <div id="terminal">
+            <div class="log-entry">> System initialized. Waiting for destination...</div>
+        </div>
+    </div>
+
+    <script>
+        function log(message, type = '') {
+            const terminal = document.getElementById('terminal');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.innerHTML = `> ${message}`;
+            terminal.appendChild(entry);
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function startMission() {
+            const dest = document.getElementById('destination').value;
+            if(!dest) return;
+
+            log(`Mission Started: Scanning safety data for ${dest}...`);
+            
+            // SIMULATED THINKING LOGS FOR DEMO PROTOCOL
+            setTimeout(() => log("Intel Scout: Accessing official government APIs...", "thought"), 800);
+            setTimeout(() => log("Agentic Recovery: API timeout detected. Switching to local news feeds.", "thought"), 2000);
+            setTimeout(() => log(`Intel Scout: Found 3 relevant alerts for ${dest}. Passing to Strategist.`), 3500);
+            setTimeout(() => log("Safety Strategist: Reasoning through unstructured reports...", "thought"), 4500);
+            setTimeout(() => log(`FINAL VERDICT: Travel to ${dest} is currently CAUTIONARY due to reported weather events.`, "alert"), 6000);
+        }
+    </script>
+</body>
+</html>
