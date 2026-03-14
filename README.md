@@ -1,7 +1,5 @@
-# your-travel-safety-agent
-An AI-agent swarm built with ADK to synthesize real-time travel safety intelligence from unstructured data.
-
 # 🛰 Vanguard Scout: Travel Safety Swarm
+An AI-agent swarm built with ADK to synthesize real-time travel safety intelligence from unstructured data.
 
 ## 📋 Project Overview
 Vanguard Scout is an autonomous travel intelligence swarm built with ADK to synthesize real-time travel safety intelligence from unstructured data.
